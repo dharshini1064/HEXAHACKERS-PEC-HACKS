@@ -1,0 +1,27 @@
+{
+  "name": "PolyPaws",
+  "version": "1.0.0",
+  "description": "A platform to connect creators, innovators, and community-driven projects with supporters who believe in their vision. ",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "Ives van Hoorne",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "11.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ethers": "^6.13.4",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.9.2"
+  },
+  "repository": "https://github.com/dharshini1064/HEXAHACKERS-PEC-HACKS",
+  "private": true
+}
