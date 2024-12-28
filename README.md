@@ -52,3 +52,7 @@ Have questions? The *Contact Us* page offers a simple form and support details. 
 
 
 From start to finish, PolyPaws guides you through a transparent, heartfelt journey where every click brings pets closer to a better life.
+
+
+
+![image](https://github.com/user-attachments/assets/afaab409-e7af-4e3b-af48-9b81479fab56)
