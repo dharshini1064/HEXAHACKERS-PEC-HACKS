@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolyPaws - Blockchain Crowdfunding for Animals</title>
+    <link rel="icon" type="image/png" href="favi.png">
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .connect-wallet {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .connect-wallet:hover {
+        background-color: #0056b3;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+      }
+
+      .logo {
+        flex-grow: 1;
+      }
+
+      nav {
+        flex-grow: 2;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .wallet-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        z-index: 1000;
+      }
+
+      .wallet-popup h3 {
+        margin-top: 0;
+      }
+
+      .wallet-popup button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .wallet-popup .close-popup {
+        background-color: #ff4b4b;
+        color: #fff;
+      }
+
+      .wallet-popup .wallet-option {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      .wallet-popup .wallet-option:hover {
+        background-color: #0056b3;
+      }
+
+      .wallet-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+     
+
+        <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="PolyPaws Logo" class="logo-image" style="width: 300px; height: 100px;" >
+            </a>
+          </div>
+          
+      <nav>
+        <a href="blogsm.html">About</a>
+        <a href="discampaign.html">Campaigns</a>
+        <a href="about.html">How it Works</a>
+        <a href="contactus.html">Contact</a>
+      </nav>
+      <button class="connect-wallet" id="connectWallet">Connect Wallet</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Support your furry friends</h1>
+        <h1>with Blockchain based Crowdfunding</h1>
+        <p>
+          Empower animal care through decentralized funding and transparent
+          donations.
+        </p>
+         <button class="cta-button" id="signMessage" disabled>
+          Sign Message
+        </button>
+
+        <div id="confirmation" class="wallet-info"></div>
+        <div class="cta-container">
+            
+                <button class="cta-button" id="startCampaign" onclick="window.location.href='campaignmsm.html'">
+                  Start a Campaign
+                </button>
+                <button class="cta-button" id="donateNow" onclick="window.location.href='discampaign.html'">
+                  Donate Now
+                </button>
+              
+              
+      </div>
+      <div class="hero-shapes">
+        <div class="circle"></div>
+        <div class="triangle"></div>
+        <div class="wave"></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <img src="dona.png" alt="Secure Donations" />
+        <h3>Secure Donations</h3>
+        <p>
+          Blockchain ensures full transparency and accountability for your
+          donations.
+        </p>
+      </div>
+      <div class="feature">
+        <img src="camp.jpg" alt="Impactful Campaigns" />
+        <h3>Impactful Campaigns</h3>
+        <p>
+          Support vetted campaigns to help animals in need across the globe.
+        </p>
+      </div>
+      <div class="feature">
+        <img src="easy.jpg" alt="Easy to Use" />
+        <h3>Easy to Use</h3>
+        <p>
+          Start a campaign or donate within minutes with a user-friendly
+          platform.
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Our Success Stories</h2>
+      <div class="gallery-container">
+        <img src="ind1.jpg" alt="Happy Dog" />
+        <img src="ind2.jpg" alt="Dog with Volunteers" />
+        <img src="ind3.jpg" alt="Rescued Cat" />
+        <img src="ind4.jpg" alt="Animals Together" />
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 PolyPaws. Blockchain for Animal Care.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
