@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyPaws Blog</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="icon" type="image/png" href="favi.png">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Blog List Body */
+        body.blog-list-body {
+           background: linear-gradient(to right bottom, #6c00f6, #6914e2, #651dcd, #6124b9, #5c28a6);
+ 
+            
+        }
+
+    
+        /* Blog List Page */
+        main.blog-list-page {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            background: linear-gradient(to bottom, #3c0066, #6c00f6);
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        main.blog-list-page h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Blog Cards */
+        .blog-card {
+            background: #4c0076;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            color: lavender;
+        }
+
+        .blog-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #00e5ff;
+        }
+
+        .blog-card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .read-more-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(to right, #00e5ff, #6c00f6);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .read-more-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #6c00f6, #00e5ff);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #2b0053;
+            color: lavender;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body class="blog-list-body">
+<header>
+    <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="PolyPaws Logo" class="logo-image" style="width: 300px; height: 100px;" >
+        </a>
+      </div>
+      
+        <nav>
+            <a href="blogsm.html">About</a>
+        <a href="discampaign.html">Campaigns</a>
+        <a href="about.html">How it Works</a>
+        <a href="contactus.html">Contact</a>
+        </nav>
+        <button class="connect-wallet" id="connectWallet">Connect Wallet</button>
+    </header>
+
+    <main class="blog-list-page">
+        <h1>Explore Our Latest Blog Posts</h1>
+        <section class="blog-list">
+            <div class="blog-card">
+                <h2>Why Dogs Deserve a Second Chance</h2>
+                <p>
+                    Dogs face numerous challenges, but with your support, they can find loving homes. 
+                    Learn how your contributions make a difference.
+                </p>
+                <button class="read-more-button" onclick="location.href= 'blogrm.html'">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h2>Supporting Cats: A Step Towards Better Care</h2>
+                <p>
+                    Cats often go unnoticed in shelters. Discover how small acts of kindness can 
+                    create a big impact on their lives.
+                </p>
+                <button class="read-more-button" onclick="location.href='blogrm.html'">Read More</button>
+            </div>
+        </section>
+    </main>
+
+       <footer>
+        <p>&copy; 2024 PolyPaws. Blockchain for Animal Care.</p>
+    </footer>
+
+
+    <script>
+     
+       const connectWalletBtn = document.getElementById('connectWallet');
+        const walletPopup = document.getElementById('walletPopup');
+        const walletOverlay = document.getElementById('walletOverlay');
+        const closePopupBtn = document.getElementById('closePopup');
+
+        connectWalletBtn.addEventListener('click', () => {
+            walletPopup.style.display = 'block';
+            walletOverlay.style.display = 'block';
+        });
+
+        closePopupBtn.addEventListener('click', () => {
+            walletPopup.style.display = 'none';
+            walletOverlay.style.display = 'none';
+        });
+
+        walletOverlay.addEventListener('click', () => {
+            walletPopup.style.display = 'none';
+            walletOverlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

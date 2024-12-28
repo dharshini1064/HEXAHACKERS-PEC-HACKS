@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PolyPaws</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="icon" type="image/png" href="favi.png">
+    <style>
+        /* Ensure the body and html occupy full height */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main content should take up available space */
+        .about-section {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="PolyPaws Logo" class="logo-image" style="width: 300px; height: 100px;">
+            </a>
+        </div>
+        <nav>
+            <a href="blogsm.html">About</a>
+            <a href="discampaign.html">Campaigns</a>
+            <a href="about.html">How it Works</a>
+            <a href="contactus.html">Contact</a>
+        </nav>
+        <button class="connect-wallet" id="connectWallet">Connect Wallet</button>
+    </header>
+
+    <section class="about-section">
+        <h2>How it works</h2>
+        <p>
+            At <strong>PolyPaws</strong>, we are passionate about improving the lives of dogs and cats in our communities. 
+            Our mission is to provide care, nourishment, and a loving environment for animals in need.
+        </p>
+        <p>
+            Through your generous donations, we ensure animals receive quality food, medical care, and a safe space. 
+            Additionally, we support our mission by offering ethically sourced products for pet lovers.
+        </p>
+        <p>
+            Together, we can create a better world for our furry friends. Whether it's feeding stray animals, supporting adoption 
+            drives, or contributing to healthcare, every small effort makes a big difference.
+        </p>
+        <img src="stell.jpg" alt="Dogs and Cats" class="about-image">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PolyPaws. Compassion for Every Paw.</p>
+    </footer>
+
+    <script>
+        function connectWallet() {
+            alert("Connecting to your wallet... This functionality will be implemented soon.");
+        }
+    </script>
+</body>
+</html>
