@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolyPaws - Updated Design</title>
+    <link rel="icon" type="image/png" href="favi.png" />
+    <link rel="stylesheet" href="style7.css" />
+    <style>
+      /* Global Gradient Background */
+      body {
+  background: linear-gradient(
+    to right,
+    #6c00f6,
+    #6914e2,
+    #651dcd,
+    #6124b9,
+    #5c28a6
+  );
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+}
+      /* Header with Gradient Navigation */
+      header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+
+      .logo {
+        flex-grow: 1;
+      }
+
+      .logo img {
+        width: 200px;
+        height: auto;
+      }
+
+      nav {
+        flex-grow: 2;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+  
+
+      nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00e5ff;
+}
+
+      .connect-wallet {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s ease;
+      }
+
+      .connect-wallet:hover {
+        background-color: #0056b3;
+      }
+
+      /* Main Content Styling */
+      .main-content {
+        padding: 40px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.2); /* Semi-transparent background for the section */
+        border-radius: 15px;
+        margin: 20px auto;
+        max-width: 1200px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .main-image img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .content-details {
+        max-width: 600px;
+        text-align: left;
+        color: #fff;
+        margin-right: 200px;
+        
+      }
+
+      .content-details h1 {
+        font-size: 2.5rem;
+        margin-right: 30px;
+        margin-bottom: 20px;
+      }
+
+      .content-details p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .cta-buttons button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(to right, #00e5ff, #6c00f6);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+
+      .cta-buttons button:hover {
+        transform: scale(1.1);
+        background: linear-gradient(to right, #6c00f6, #00e5ff);
+      }
+
+      /* Footer */
+      footer {
+    background: #2b0053;
+    color: lavender;
+    text-align: center;
+    padding: 15px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="PolyPaws Logo" class="logo-image" style="width: 300px; height: 100px;" >
+            </a>
+          </div>
+  
+      <nav>
+        <a href="blogsm.html">About</a>
+        <a href="discampaign.html">Campaigns</a>
+        <a href="about.html">How it Works</a>
+        <a href="contactus.html">Contact</a>
+        <a href="pupy.html">Events</a>
+      </nav>
+     
+
+<button class="connect-wallet" id="connectWallet">Connect Wallet</button>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+<script src="script.js"></script>   
+          
+    
+    </header>
+    <section class="main-content">
+      <div class="main-image">
+        <img src="ppj.jpg" alt="Puppy Yoga" />
+      </div>
+      <div class="content-details">
+        <h1>Puppies. Yoga. Endless Love.</h1>
+        <p>
+          Discover our top-rated 75-minute yoga class surrounded by puppies. 
+          Enjoy 45 minutes of all-level yoga followed by 30 minutes of cuddles 
+          and fun with adorable puppies. Join over 45,000 guests who’ve loved 
+          this one-of-a-kind experience!
+        </p>
+        <div class="cta-buttons">
+          <button onclick="window.location.href='book-class.html'">Book Your Class</button>
+          
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PolyPaws. Blockchain for Animal Care.</p>
+      </footer>
+  </body>
+</html>
