@@ -2,7 +2,7 @@
 POLY PAWS-BLOCKCHAIN BASED CROWD FUNDING PAGE FOR ANIMALS
 
 Polypaws is a next-generation crowdfunding platform built on blockchain technology. It empowers individuals and organizations to launch transparent, secure, and globally accessible fundraising campaigns. Using smart contracts, Polypaws automates transactions, enforces accountability, and builds trust among backers and creators.
-
+We have utilized technologies such as Solidity, CSS, MetaMask, JavaScript, Package JSON, Remix IDE, HTML5, and Yarn to build the PolyPaws platform.
 
 
 
