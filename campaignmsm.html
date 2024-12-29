@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PolyPaws - Blockchain for Animal Care">
+    <title>Campaign Details - PolyPaws</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="icon" type="image/png" href="favi.png">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-section {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="PolyPaws Logo" class="logo-image" style="max-width: 100%; height: auto;">
+            </a>
+        </div>
+        <nav>
+            <a href="blogsm.html">About</a>
+            <a href="discampaign.html">Campaigns</a>
+            <a href="about.html">How it Works</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+        <button class="connect-wallet" id="connectWallet">Connect Wallet</button>
+    </header>
+
+    <section class="form-section">
+        <h2>Campaign Details</h2>
+        <form id="campaignForm">
+            <label for="Name">Associated NGO Name</label>
+            <input type="text" id="Name" placeholder="Associated NGO Name" required>
+            
+            <label for="Email">Email</label>
+            <input type="email" id="Email" placeholder="Email" required>
+            
+            <label for="campaignName">Campaign Name</label>
+            <input type="text" id="campaignName" placeholder="Campaign Name" required>
+            
+            <label for="campaignGoal">Goal Amount (USD)</label>
+            <input type="number" id="campaignGoal" placeholder="Goal Amount (USD)" min="0" step="any" required>
+            
+            <label for="campaignDescription">Short Description</label>
+            <textarea id="campaignDescription" placeholder="Short Description" required></textarea>
+            
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PolyPaws. Blockchain for Animal Care.</p>
+    </footer>
+
+    <script>
+        const CONTRACT_ADDRESS = "0x01B26A0af3760b8Abfe051C0b622b253Efe3346E";
+        const ABI = [
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "creatorName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "creatorEmail",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "campaignName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "goal",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "creator",
+				"type": "address"
+			}
+		],
+		"name": "CampaignCreated",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "contribute",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "contributor",
+				"type": "address"
+			}
+		],
+		"name": "ContributionMade",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_creatorName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_creatorEmail",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_campaignName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_goal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_description",
+				"type": "string"
+			}
+		],
+		"name": "createCampaign",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawFunds",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "campaigns",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "creatorName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "creatorEmail",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "campaignName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "goal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "address payable",
+				"name": "creator",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "fundsRaised",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllCampaigns",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "creatorName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "creatorEmail",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "campaignName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "goal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "address payable",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fundsRaised",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Crowdfunding.Campaign[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getCampaignDetails",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "creatorName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "creatorEmail",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "campaignName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "goal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "fundsRaised",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+        document.getElementById("connectWallet").addEventListener("click", async function () {
+            if (!window.ethereum) {
+                alert("Metamask not found. Please install it.");
+                return;
+            }
+            try {
+                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                await provider.send("eth_requestAccounts", []);
+                const signer = provider.getSigner();
+                const address = await signer.getAddress();
+                alert(`Connected to wallet: ${address}`);
+            } catch (error) {
+                console.error("Failed to connect wallet:", error);
+                alert("Failed to connect wallet. See console for details.");
+            }
+        });
+
+        document.getElementById("campaignForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const name = document.getElementById("Name").value;
+            const email = document.getElementById("Email").value;
+            const campaignName = document.getElementById("campaignName").value;
+            const campaignGoal = document.getElementById("campaignGoal").value;
+            const campaignDescription = document.getElementById("campaignDescription").value;
+
+            if (!window.ethereum) {
+                alert("Metamask not found. Please install it.");
+                return;
+            }
+
+            try {
+                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                const signer = provider.getSigner();
+                const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+                const goalInWei = ethers.utils.parseEther(campaignGoal.toString());
+
+                const tx = await contract.createCampaign(name, email, campaignName, campaignGoal, campaignDescription);
+                await tx.wait();
+                alert("Campaign created successfully!");
+            } catch (error) {
+                console.error("Error creating campaign:", error);
+                alert("Failed to create campaign. See console for details.");
+            }
+        });
+    </script>
+</body>
+</html>
