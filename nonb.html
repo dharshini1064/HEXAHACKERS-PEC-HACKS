@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PolyPaws Payment Options</title>
+  <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="PolyPaws Logo" class="logo-image" style="width: 300px; height: 100px;" >
+        </a>
+      </div>
+      
+  <nav>
+    <a href="blogsm.html">About</a>
+    <a href="discampaign.html">Campaigns</a>
+    <a href="about.html">How it Works</a>
+    <a href="contactus.html">Contact</a>
+    <a href="pupy.html">Events</a>
+  </nav>
+  
+  <button class="connect-wallet" id="connectwallet" onclick="location.href='nonb.html';">
+    Non-Blockchain Mode enabled
+</button>
+  </header>
+
+  <main>
+    <div class="payment-container">
+      <h1>Select a Payment Option</h1>
+      <form id="paymentForm">
+        <label>
+          <input type="radio" name="paymentOption" value="credit-debit-card" required>
+          Credit/Debit Card
+        </label>
+        <label>
+          <input type="radio" name="paymentOption" value="net-banking">
+          Net Banking
+        </label>
+        <label>
+          <input type="radio" name="paymentOption" value="upi-apps">
+          UPI Apps
+        </label>
+        <label>
+          <input type="radio" name="paymentOption" value="wallet">
+          Wallet
+        </label>
+        <button type="submit">Proceed</button>
+      </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 PolyPaws. Blockchain for Animal Care.</p>
+      </footer>
+  </main>
+
+  <script>
+    const paymentForm = document.getElementById('paymentForm');
+    paymentForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Payment option selected. Proceeding to payment gateway...');
+    });
+  </script>
+</body>
+</html>
