@@ -54,16 +54,23 @@ Next, you browse success stories. A vibrant gallery showcases rescued pets who f
 
 ![WhatsApp Image 2024-12-29 at 09 46 36_f64f5c3b](https://github.com/user-attachments/assets/c0cdcfc1-a26f-4196-ac2a-bf9c93581bcf)
 
+**5. Events page:** 
+
+At PolyPaws, our events bring people and animals together for fun and meaningful experiences that support animal welfare. Join activities like Puppy Yoga, Cat Café Experiences, Doggie Playdates, and Adventure Hikes with Shelter Dogs. Each event is designed to create joy while raising funds for medical care, shelter, and adoption initiatives. Whether you're painting with pets or stretching with puppies, every moment contributes to a brighter future for animals in need.  
+Booking is easy, with options for *blockchain* or *traditional payments*, ensuring transparency and accessibility for all participants.
 
 
-**5. About Us:**  
+![image](https://github.com/user-attachments/assets/42d10e49-50f8-405e-95ac-8bdd5afa8a47)
+
+
+**6. About Us:**  
 For a deeper connection, you visit the *About Us* page. Here, PolyPaws shares its mission, introducing you to the team and showcasing the impact—thousands of pets saved, millions raised.  
 
 ![image](https://github.com/user-attachments/assets/219939eb-40f9-4b31-890c-96aa96b186ed)
 
 
 
-**6. Contact Us:**  
+**7. Contact Us:**  
 Have questions? The *Contact Us* page offers a simple form and support details. It’s a reassuring touch, reminding you that the PolyPaws team is always here to help.  
 
 ![WhatsApp Image 2024-12-29 at 09 47 53_ef97239c](https://github.com/user-attachments/assets/1cf0d760-bc7e-47a8-98d9-9b0c17474197)
