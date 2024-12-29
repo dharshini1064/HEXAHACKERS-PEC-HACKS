@@ -1,0 +1,190 @@
+/* General Body Styling */
+
+
+
+/* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(
+      to right,
+      #6c00f6,
+      #6914e2,
+      #651dcd,
+      #6124b9,
+      #5c28a6
+    );
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  header .logo h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #00e5ff;
+  }
+  
+
+  
+  /* Header and Navigation Bar */
+
+  
+  header .logo img {
+    width: 150px;
+  }
+  
+  connect-wallet {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+
+  connect-wallet-1 {
+    position: absolute;
+    top: 10px;
+    right: 250px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  connect-wallet:hover {
+    background-color: #0056b3;
+  }
+
+
+  
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  a.non-blockchain-mode {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  a.non-blockchain-mode:hover {
+    background-color: #3b9c42;
+  }
+  
+  button.connect-wallet {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button.connect-wallet:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Payment Options Container */
+  .payment-container {
+    background: rgba(60, 19, 148, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(114, 29, 150, 0.5);
+    max-width: 500px;
+    width: 90%;
+    margin: 120px auto 0;
+    text-align: center;
+  }
+  
+  .payment-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between options */
+  }
+  
+  form label {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the radio button and text */
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  form input[type="radio"] {
+    margin: 0;
+    accent-color: #7e5cff; /* Custom color for radio buttons */
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to bottom right, #6610f2, #7e5cff, #a155ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom right, #a155ff, #7e5cff, #6610f2);
+  }
+
+  footer {
+    background: #2b0053;
+    color: lavender;
+    text-align: center;
+    margin-top: 80px;
+}
