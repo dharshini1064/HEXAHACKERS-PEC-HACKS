@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PolyPaws</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="icon" type="image/png" href="favi.png">
+    <style>
+        /* Ensure the body and html occupy full height */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main content should take up available space */
+        .form-section {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="PolyPaws Logo" class="logo-image" style="width: 300px; height: 100px;">
+            </a>
+        </div>
+        <nav>
+            <a href="blogsm.html">About</a>
+            <a href="discampaign.html">Campaigns</a>
+            <a href="about.html">How it Works</a>
+            <a href="contactus.html">Contact</a>
+            <a href="pupy.html">Events</a>
+        </nav>
+        <button class="connect-wallet" id="connectWallet">Connect Wallet</button>
+    </header>
+    <button class="connect-wallet" id="connectWallet">Connect Wallet</button>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+<script src="script.js"></script>
+          
+
+    <section class="form-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PolyPaws. Blockchain for Animal Care.</p>
+    </footer>
+
+ 
+</body>
+</html>
